@@ -9,7 +9,7 @@ class ResumerPage extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            Text(
+            const Text(
               'Resume',
             ),
             Image.asset(
