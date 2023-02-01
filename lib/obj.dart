@@ -20,18 +20,23 @@ Widget emailRow(context) {
           showDialog(
             context: context,
             builder: (ctx) => AlertDialog(
-              title: const Text("Email Adress copied."),
+              title: const Center(child: Text("Email Adress copied.")),
               actions: <Widget>[
                 TextButton(
                   onPressed: () {
                     Navigator.of(ctx).pop();
                   },
-                  child: Container(
-                    color: Colors.black,
-                    padding: const EdgeInsets.all(14),
-                    child: Text(
-                      "okay",
-                      style: GoogleFonts.roboto(color: Colors.white),
+                  child: Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: Container(
+                        color: Colors.black,
+                        padding: const EdgeInsets.all(14),
+                        child: Text(
+                          "okay",
+                          style: GoogleFonts.roboto(color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -61,18 +66,23 @@ Widget phoneNuberRow(context) {
           showDialog(
             context: context,
             builder: (ctx) => AlertDialog(
-              title: const Text("Phone number copied."),
+              title: const Center(child: Text("Phone number copied.")),
               actions: <Widget>[
                 TextButton(
                   onPressed: () {
                     Navigator.of(ctx).pop();
                   },
-                  child: Container(
-                    color: Colors.black,
-                    padding: const EdgeInsets.all(14),
-                    child: Text(
-                      "okay",
-                      style: GoogleFonts.roboto(color: Colors.white),
+                  child: Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: Container(
+                        color: Colors.black,
+                        padding: const EdgeInsets.all(14),
+                        child: Text(
+                          "okay",
+                          style: GoogleFonts.roboto(color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -105,7 +115,7 @@ Widget resumeBtn(context) {
           child: Center(
             child: Text(
               'Open my resuome',
-              style: GoogleFonts.lato(
+              style: GoogleFonts.roboto(
                 fontSize: 18,
                 color: Colors.white,
               ),

@@ -18,6 +18,9 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.2,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -28,7 +31,7 @@ class MainPage extends StatelessWidget {
                       Text(
                         'Radin Erfanfar,',
                         style: GoogleFonts.lato(
-                          fontSize: 38,
+                          fontSize: 68,
                           color: Colors.black,
                         ),
                       ),
@@ -38,7 +41,7 @@ class MainPage extends StatelessWidget {
                       Text(
                         'Junior Flutter Developer.',
                         style: GoogleFonts.lato(
-                          fontSize: 38,
+                          fontSize: 64,
                           color: Colors.black,
                         ),
                       ),
@@ -53,15 +56,21 @@ class MainPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
                   Column(
                     children: [
                       Image.asset(
                         'char.png',
-                        width: 360,
+                        width: 525,
                       ),
                     ],
                   ),
                 ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.25,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,34 +126,40 @@ class MainPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 12,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.25,
               ),
               const Divider(
                 indent: 150,
                 endIndent: 150,
               ),
-              emailRow(context),
-              const SizedBox(
-                height: 8,
-              ),
-              phoneNuberRow(context),
-              const SizedBox(
-                height: 8,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  emailRow(context),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  phoneNuberRow(context),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
                     'linkedin.png',
-                    width: 48,
+                    width: 58,
                   ),
                   const SizedBox(
                     width: 14,
                   ),
                   Image.asset(
                     'github.png',
-                    width: 48,
+                    width: 58,
                   ),
                 ],
               ),
