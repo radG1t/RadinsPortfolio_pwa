@@ -13,7 +13,9 @@ class ResumerPage extends StatelessWidget {
               'Resume',
             ),
             Image.asset(
-                '/home/radin/MaShits/web-projects/my_portfolio/Images/phone.png'),
+              'male_char.png',
+              width: 50,
+            ),
           ],
         ),
       ),
