@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ResumerPage extends StatelessWidget {
   const ResumerPage({super.key});
@@ -8,7 +6,17 @@ class ResumerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Resume')),
+      appBar: AppBar(
+        title: Row(
+          children: [
+            Text(
+              'Resume',
+            ),
+            Image.asset(
+                '/home/radin/MaShits/web-projects/my_portfolio/Images/phone.png'),
+          ],
+        ),
+      ),
     );
   }
 }

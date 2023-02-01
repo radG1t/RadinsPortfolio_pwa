@@ -1,5 +1,3 @@
-import 'package:dotted_line/dotted_line.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/resume.dart';
@@ -10,22 +8,6 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /* appBar: AppBar(
-        // Appbar may be deleted.
-        toolbarHeight: 48,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text('Radins Portfolio'),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(CupertinoIcons.moon,
-                  color: Colors.white, size: 22),
-            ),
-          ],
-        ),
-      ),  */
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
@@ -44,6 +26,11 @@ class MainPage extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+
+                Image.asset(
+                  'email.png',
+                  width: 28,
+                ),
                 Text(
                   'Junior Flutter Developer.',
                   style: GoogleFonts.lato(
@@ -51,57 +38,72 @@ class MainPage extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                Row(
+                Row(), // screen shots here :
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Image.asset(
-                      'email.png',
-                      width: 28,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'email.png',
+                          width: 28,
+                        ),
+                        const Text(' RadinErfanfar@gmail.com'),
+                      ],
                     ),
-                    Text(' RadinErfanfar@gmail.com'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Image.asset(
-                      'phone.png',
-                      width: 28,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'phone.png',
+                          width: 28,
+                        ),
+                        const Text('+98 9902532818'),
+                      ],
                     ),
-                    const Text('+98 9902532818'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Image.asset(
-                      'github.png',
-                      width: 48,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'linkedin.png',
+                          width: 48,
+                        ),
+                        Image.asset(
+                          'github.png',
+                          width: 48,
+                        ),
+                        Image.asset(
+                          'male_char.png',
+                          width: 48,
+                        ),
+                      ],
                     ),
-                    Image.asset(
-                      'linkedin.png',
-                      width: 48,
-                    ),
-                  ],
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: GestureDetector(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ResumerPage()),
-                    ),
-                    child: Container(
-                      color: Colors.black,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Open my resuome',
-                          style: GoogleFonts.lato(
-                            fontSize: 22,
-                            color: Colors.white,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: GestureDetector(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ResumerPage(),
+                          ),
+                        ),
+                        child: Container(
+                          color: Colors.black,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Open my resuome',
+                              style: GoogleFonts.lato(
+                                fontSize: 22,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
