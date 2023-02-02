@@ -44,7 +44,13 @@ Widget emailRow(context) {
             ),
           );
         },
-        child: const Text(' RadinErfanfar@gmail.com'),
+        child: Text(
+          ' RadinErfanfar@gmail.com',
+          style: GoogleFonts.roboto(
+            fontSize: 18,
+            color: Colors.black,
+          ),
+        ),
       ),
     ],
   );
@@ -56,42 +62,47 @@ Widget phoneNuberRow(context) {
     children: [
       Image.asset(
         'phone.png',
-        width: 28,
+        width: 38,
       ),
       GestureDetector(
-        onTap: () async {
-          await Clipboard.setData(const ClipboardData(text: "+989902532818"));
+          onTap: () async {
+            await Clipboard.setData(const ClipboardData(text: "+989902532818"));
 
-          // ignore: use_build_context_synchronously
-          showDialog(
-            context: context,
-            builder: (ctx) => AlertDialog(
-              title: const Center(child: Text("Phone number copied.")),
-              actions: <Widget>[
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(ctx).pop();
-                  },
-                  child: Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(4),
-                      child: Container(
-                        color: Colors.black,
-                        padding: const EdgeInsets.all(14),
-                        child: Text(
-                          "okay",
-                          style: GoogleFonts.roboto(color: Colors.white),
+            // ignore: use_build_context_synchronously
+            showDialog(
+              context: context,
+              builder: (ctx) => AlertDialog(
+                title: const Center(child: Text("Phone number copied.")),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(ctx).pop();
+                    },
+                    child: Center(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: Container(
+                          color: Colors.black,
+                          padding: const EdgeInsets.all(14),
+                          child: Text(
+                            "okay",
+                            style: GoogleFonts.roboto(color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
+            );
+          },
+          child: Text(
+            '+98 9902532818',
+            style: GoogleFonts.roboto(
+              fontSize: 18,
+              color: Colors.black,
             ),
-          );
-        },
-        child: const Text('+98 9902532818'),
-      ),
+          )),
     ],
   );
 }
