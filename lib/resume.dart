@@ -6,19 +6,7 @@ class ResumerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            const Text(
-              'Resume',
-            ),
-            Image.asset(
-              'male_char.png',
-              width: 50,
-            ),
-          ],
-        ),
-      ),
+      body: Text('resume'),
     );
   }
 }

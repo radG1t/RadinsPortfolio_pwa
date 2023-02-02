@@ -137,3 +137,43 @@ Widget resumeBtn(context) {
     ),
   );
 }
+
+Widget Page0_AppBar() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.end,
+    children: [
+      Text(
+        'Resume',
+        style: GoogleFonts.lato(color: Colors.black38, fontSize: 18),
+      ),
+      const SizedBox(
+        width: 4,
+      ),
+      const Text(
+        '|',
+        style: TextStyle(color: Colors.black54, fontSize: 22),
+      ),
+      const SizedBox(
+        width: 4,
+      ),
+      Text(
+        'Projects',
+        style: GoogleFonts.lato(color: Colors.black38, fontSize: 18),
+      ),
+      const SizedBox(
+        width: 4,
+      ),
+      const Text(
+        '|',
+        style: TextStyle(color: Colors.black54, fontSize: 22),
+      ),
+      const SizedBox(
+        width: 4,
+      ),
+      Text(
+        'info',
+        style: GoogleFonts.lato(color: Colors.black38, fontSize: 18),
+      ),
+    ],
+  );
+}
