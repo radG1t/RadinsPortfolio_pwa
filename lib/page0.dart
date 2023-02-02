@@ -13,7 +13,7 @@ class Page0 extends StatelessWidget {
         elevation: 0,
         shadowColor: Colors.white,
         backgroundColor: Colors.white,
-        title: Page0_AppBar(),
+        title: Page0_AppBar(context),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

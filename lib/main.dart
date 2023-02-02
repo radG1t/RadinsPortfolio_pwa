@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:my_portfolio/home.dart';
-
 import 'package:my_portfolio/page0.dart';
 import 'package:my_portfolio/page1.dart';
 
@@ -37,6 +35,8 @@ class _MainWrapperState extends State<MainWrapper> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: BouncingScrollPhysics(),
+        //  physics: const ScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         controller: _mypages,
         scrollDirection: Axis.vertical,
         pageSnapping: true,
